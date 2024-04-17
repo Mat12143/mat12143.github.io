@@ -2,7 +2,6 @@ name: Deploy to GitHub Pages
 
 on:
   # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: ["main"]
 
@@ -30,13 +29,11 @@ jobs:
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
-        with:
-          version: 8
 
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 21
           cache: pnpm
 
       - name: Install dependencies
@@ -48,12 +45,11 @@ jobs:
           static_site_generator: sveltekit
 
       - name: Build
-        run: pnpm run build
+        run: pnpm build
 
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v1
         with:
-          # this should match the `pages` option in your adapter-static options
           path: "build/"
 
   deploy:
