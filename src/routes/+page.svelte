@@ -22,18 +22,18 @@
     }
 </script>
 
-<div class="flex flex-row justify-center items-center h-screen w-screen">
-    <div class="flex flex-row gap-10">
-        <div class="flex flex-col justify-center">
+<div class="flex flex-row justify-center items-center h-full w-full lg:h-screen lg:w-screen">
+    <div class="flex flex-col lg:flex-row gap-10 items-center justify-center">
+        <div class="flex flex-col justify-center items-center text-center lg:items-start lg:text-start">
             <h1 class="text-mono text-2xl font-medium text-text">Hi, I am</h1>
             <h1 class="text-mono text-5xl font-semibold text-primary">
                 Matteo Peretto
             </h1>
             <h1
-                class="text-mono text-2xl font-medium text-text max-w-[550px] pt-2"
+                class="text-mono text-2xl font-medium text-text lg:max-w-[550px] pt-2"
             >
-                A {age} years old guy that loves tinkering, crafting and learning
-                innovative solutions to make my life easier.
+                A {age} years old guy that loves Linux, Networking, Programming &
+                Technology.
             </h1>
             <div class="pt-5 flex gap-3">
                 <Icon
@@ -50,7 +50,7 @@
                 />
             </div>
         </div>
-        <div>
+        <div class="">
             <img src={logo} alt="Logo" class="max-w-[300px] rounded-md" />
         </div>
     </div>

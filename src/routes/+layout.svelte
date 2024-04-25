@@ -2,7 +2,9 @@
     import "../app.css";
 </script>
 
-<title>Matteo Peretto</title>
+<svelte:head>
+    <title>Matteo Peretto</title>
+</svelte:head>
 
 <div class="w-screen h-screen bg-background text-mono">
     <slot />
