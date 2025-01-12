@@ -1,6 +1,6 @@
 <script lang="ts">
     import Icon from "$lib/components/Icon.svelte";
-    import logo from "$lib/images/Logo.png";
+    import logo from "$lib/images/Logo.webp";
 
     const dateOfBirth = new Date("2005-08-30");
 
@@ -30,7 +30,7 @@
                 Matteo Peretto
             </h1>
             <h1
-                class="text-mono text-xl font-medium text-text lg:max-w-[550px] pt-2 font-mono"
+                class="text-mono text-xl font-medium text-text lg:max-w-[550px] max-w-[300px] pt-2 font-mono"
             >
                 A {age} years old guy that loves Linux, Networking, Programming &
                 Technology.
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="">
-            <img src={logo} alt="Logo" class="max-w-[300px] rounded-md" />
+            <img src={logo} alt="Logo" class="lg:max-w-[300px] max-w-[250px] rounded-md" />
         </div>
     </div>
 </div>
