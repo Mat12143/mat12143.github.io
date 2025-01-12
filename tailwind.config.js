@@ -8,7 +8,10 @@ export default {
             text: "#56644F",
             primary: "#EF2943",
         },
-        fontFamily: {},
+        fontFamily : {
+            'mono' : ["JetBrains-Regular"],
+            'semibold' : ["JetBrains-SemiBold"]
+        }
     },
     plugins: [addDynamicIconSelectors()],
 };

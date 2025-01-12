@@ -25,12 +25,12 @@
 <div class="flex flex-row justify-center items-center h-full w-full lg:h-screen lg:w-screen">
     <div class="flex flex-col lg:flex-row gap-10 items-center justify-center">
         <div class="flex flex-col justify-center items-center text-center lg:items-start lg:text-start">
-            <h1 class="text-mono text-2xl font-medium text-text">Hi, I am</h1>
+            <h1 class="text-mono text-xl font-medium text-text font-mono pb-2">Hi, I am</h1>
             <h1 class="text-mono text-5xl font-semibold text-primary">
                 Matteo Peretto
             </h1>
             <h1
-                class="text-mono text-2xl font-medium text-text lg:max-w-[550px] pt-2"
+                class="text-mono text-xl font-medium text-text lg:max-w-[550px] pt-2 font-mono"
             >
                 A {age} years old guy that loves Linux, Networking, Programming &
                 Technology.
