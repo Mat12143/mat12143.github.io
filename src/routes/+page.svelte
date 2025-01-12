@@ -23,7 +23,7 @@
 </script>
 
 <div class="flex flex-row justify-center items-center h-full w-full lg:h-screen lg:w-screen">
-    <div class="flex flex-col lg:flex-row gap-10 items-center justify-center">
+    <div class="flex flex-col lg:flex-row gap-5 items-center justify-center">
         <div class="flex flex-col justify-center items-center text-center lg:items-start lg:text-start">
             <h1 class="text-mono text-xl font-medium text-text font-mono pb-2">Hi, I am</h1>
             <h1 class="text-mono text-5xl font-semibold text-primary">

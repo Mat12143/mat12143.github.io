@@ -4,8 +4,8 @@ export default {
     content: ["./src/**/*.{html,js,svelte,ts}"],
     theme: {
         colors: {
-            background: "#0B1020",
-            text: "#56644F",
+            text : "#A2B182",
+            background: "#1f1f1f",
             primary: "#EF2943",
         },
         fontFamily : {
