@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="">
-            <img src={logo} alt="Logo" class="lg:max-w-[300px] max-w-[250px] rounded-md" />
+            <img src={logo} alt="My logo" class="lg:max-w-[300px] max-w-[250px] rounded-md" />
         </div>
     </div>
 </div>
