@@ -1,68 +1,35 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
   push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
-  workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+    branches:
+      - main  # Trigger deploy on push to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      # Step 1: Checkout the repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      # Step 2: Set up pnpm
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v2
         with:
-          version: latest
+          version: 7 # Specify the version of pnpm you want to use
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 23
-          cache: pnpm
-
+      # Step 3: Install dependencies with pnpm
       - name: Install dependencies
         run: pnpm install
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
+      # Step 4: Build the SvelteKit app
+      - name: Build SvelteKit app
+        run: pnpm run build
+
+      # Step 5: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          static_site_generator: sveltekit
-
-      - name: Build
-        run: pnpm build
-
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact
-        with:
-          path: "build/"
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v1
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
