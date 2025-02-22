@@ -6,6 +6,6 @@
     <title>Matteo Peretto</title>
 </svelte:head>
 
-<div class="w-screen h-screen bg-background text-mono">
+<div class="w-screen h-max bg-background text-mono">
     <slot />
 </div>

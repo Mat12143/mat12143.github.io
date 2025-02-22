@@ -52,7 +52,7 @@
             />
         </div>
     </div>
-    <div class="">
+    <div>
         <img
             src={logo}
             alt="My logo"
