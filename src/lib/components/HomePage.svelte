@@ -32,11 +32,11 @@
         <h1 class="text-mono text-5xl font-semibold text-primary">
             Matteo Peretto
         </h1>
-        <h1
+        <h2
             class="text-mono text-xl font-medium text-text lg:max-w-[550px] max-w-[250px] pt-2 font-mono"
         >
             A {age} years old guy that loves Linux, Networking, Programming & Technology.
-        </h1>
+        </h2>
         <div class="pt-5 flex gap-3">
             <Icon
                 link="https://t.me/Mat12143"
@@ -56,7 +56,10 @@
         <img
             src={logo}
             alt="My logo"
+            width="300px"
+            height="300px"
             class="lg:max-w-[300px] max-w-[250px] rounded-md"
+            fetchpriority="high"
         />
     </div>
 </div>

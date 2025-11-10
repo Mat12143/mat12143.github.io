@@ -6,11 +6,12 @@
     @font-face {
         font-family: "JetBrains-Regular";
         src: url(/fontRegular.woff2) format("woff2");
-        /*font-display: swap;*/
+        font-display: swap;
     }
+
     @font-face {
         font-family: "JetBrains-SemiBold";
         src: url(/fontSemiBold.woff2) format("woff2");
-        /*font-display: swap;*/
+        font-display: swap;
     }
 }
